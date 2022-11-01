@@ -1,0 +1,14 @@
+{
+  "name": "trillo-project",
+  "version": "1.0.0",
+  "description": "Landing page for Trillo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Norm",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.3"
+  }
+}
