@@ -1,5 +1,5 @@
 /////////////////////////////////////
-/// Logo
+// Logo
 
 .logo {
   height: 3.25rem;
@@ -7,7 +7,7 @@
 }
 
 /////////////////////////////////////
-/// Search
+// Search
 
 .search {
   flex: 0 0 40%;
@@ -64,7 +64,7 @@
 }
 
 //////////////////////////////////////
-/// User Navigation
+// User Navigation
 
 .user-nav {
   align-self: stretch;
@@ -110,14 +110,14 @@
   }
 
   &__user-photo {
-    height: 3.75rem;
+    height: 3.15rem;
     border-radius: 50%;
     margin-right: 1rem;
   }
 }
 
 /////////////////////////////////////
-/// Side Navigation
+// Side Navigation
 
 .side-nav {
   font-size: 1.4rem;
@@ -127,13 +127,12 @@
   &__item {
     position: relative;
 
-    &:not(:last-child){
-      margin-bottom: .5rem;
-
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
     }
   }
 
-  &__item::before{
+  &__item::before {
     content: "";
     position: absolute;
     top: 0;
@@ -143,15 +142,17 @@
     background-color: var(--color-primary);
     transform: scaleY(0);
     // time delay added to transition
-    transition: transform .2s, width .4s cubic-bezier(1,0,0,1) .2s, background-color .1s;
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+      background-color 0.1s;
   }
 
-  &__item:hover::before, &__item--active::before {
+  &__item:hover::before,
+  &__item--active::before {
     transform: scaleY(1);
     width: 100%;
   }
 
-  &__item:active::before{
+  &__item:active::before {
     background-color: var(--color-primary-light);
   }
 
@@ -176,14 +177,60 @@
     // color of current of element
     fill: currentColor;
   }
-
 }
 
 /////////////////////////////////////
-/// Legal
+// Legal
 .legal {
   font-size: 1.2rem;
   text-align: center;
   color: var(--color-grey-light-4);
   padding: 2.5rem;
+}
+
+/////////////////////////////////////
+// Gallery
+
+.gallery {
+  display: flex;
+  &__photo {
+    width: 100%; // allows flexible pictures for responsive
+    display: block; // prevents whitespace under image
+  }
+}
+
+/////////////////////////////////////
+// Hotel overview
+
+.overview {
+  display: flex;
+  border-bottom: 1px solid var(--color-grey-light-2);
+
+  &__heading {
+  }
+
+  &__stars {
+    // flex: 1;
+    margin-right: auto;
+  }
+
+  &__icon-star,
+  &__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary);
+  }
+
+  &__location {
+  }
+
+  &__rating {
+  }
+
+  &__rating-average {
+  }
+
+  &__rating-count {
+  }
+
 }
